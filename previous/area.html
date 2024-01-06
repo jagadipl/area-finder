@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculator</title>
+    <style>
+        #length{ padding: 15px;
+            border-radius: 10px;
+            }
+     #breadth{
+        padding: 15px;
+        border-radius: 10px;
+     }
+     #calculate{
+        padding: 15px;
+        border-radius: 15px;
+     }
+
+     
+     
+    </style>
+</head>
+<body>
+    <h1>Area Calculator</h1>
+    <form action="">
+        <label for="length">Enter Length: </label>
+        <input type="number" id="length">
+<label for="breadth">Enter Breadth:</label>
+<input type="number" id="breadth">
+
+<input type="button" id="calculate" value="calculate" onclick="calculateTotal()">
+
+<p id="result"></p>
+
+    </form>
+    <script>
+        function calculateTotal(){
+            len = document.getElementById("length").value
+            bre = document.getElementById("breadth").value
+
+            area = parseFloat(len) * parseFloat(bre)
+
+            document.getElementById("result").innerHTML= `Area is ${area}`
+        }
+    </script>
+</body>
+</html>

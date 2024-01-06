@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date converter</title>
+    <style>
+        #month {
+            padding: 15px;
+            border-radius: 10px;
+            width: 90px;
+            font-size: medium;
+            border: 2px solid black;
+           
+        }
+        #day{
+            padding: 15px;
+            border-radius: 10px;
+            width: 60px;
+            font-size: medium;
+        }
+        #year{
+            padding: 15px;
+            border-radius: 10px;
+            width:60px;
+            font-size: medium;
+        }
+        #button{
+          padding: 15px;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+        body{
+            background-color: aquamarine;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+        #button:hover{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body> 
+    <h1><u>Age Calculator</u></h1>
+    <form action="#">
+        <label for="number">Year:</label>
+        <input type="number" id="year"><br><br>
+        <input type="button" onclick="dateconverter()" id="button" value="Check">
+
+    </form>
+    
+    <script>
+        function dateconverter(){
+           birthYear = parseFloat(document.getElementById("year").value);
+        age = 2023-birthYear;
+        alert(`Your age is ${age}`)
+
+        }
+    </script>
+</body>
+</html>

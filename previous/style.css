@@ -1,0 +1,23 @@
+#number1 {
+    padding: 15px;
+    border-radius: 10px;
+    font-size: medium;
+}
+#number2{ 
+    padding: 15px;
+    border-radius: 10px;
+    font-size: medium;
+}
+#form{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: bisque;
+    font-size: medium;
+}
+#form:hover{
+    color:chocolate;
+    
+}
+body{
+    font-size: 20px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency convert</title>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <form action="#">
+        <input type="number" id="number" placeholder="Enter usd">
+
+        <p> Which currency do you like to convert?</p>
+        <input type="radio" id="nepali" name="convert" value="nepali">
+        <label for="nepali">Nepali</label>
+        <input type="radio" id="indian" name="convert" value="indian">
+        <label for="india">Indian</label>
+        <input type="radio" id="japanease" name="convert" value="japanease">
+        <label for="japan"> Japanease</label><br><br>
+        <input type="button" id="button" onclick="CurrencyConvert()" value="Convert">
+    </form>
+    <script>
+        function CurrencyConvert(){
+            usd = document.getElementById("number").value
+       chosenCountry = document.querySelector("input[name='convert']:checked").value
+       if(chosenCountry== "nepali"){
+        amount = parseFloat(usd)* 130;
+        alert(`Converted Nepali Acmount is ${amount}`)
+       }else if(chosenCountry== "indian"){
+        amount = parseFloat(usd)* 83
+        alert(`Converted indian Amount is ${amount}`)
+       }else if(chosenCountry == "japanease"){
+        amount = parseFloat(usd)* 142
+        alert(`Converted Japanease Amount is ${amount}`)
+       }else{
+        alert("Please choose country first")
+       }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        #number{
+            padding: 15px;
+            border-radius: 10px;
+
+        }
+        #button{
+            padding: 15px;
+            border-radius: 10px;
+        }
+        #button:hover{
+            background-color:chocolate;
+        }
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Creating a Number guess game.</h1>
+     <input type="number" id="number" placeholder="Enter your number"><br><br>
+     <input type="button" onclick="numberGuess()" value="Check" id="button">
+    <p id="result"></p>
+
+     <script>
+        function numberGuess(){
+            randomNum =  Math.floor(Math.random()*10)
+            userGuess = parseFloat(document.getElementById("number").value);
+
+            if(randomNum == userGuess){
+                document.getElementById("result").innerHTML= `Your guess is right.`
+            }else{
+                document.getElementById("result").innerHTML= `Your guess is wrong. Random value is ${randomNum}`
+                
+            }
+        }
+     </script>
+</body>
+</html>

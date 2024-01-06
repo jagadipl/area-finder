@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square html</title>
+</head>
+<body>
+    <form>
+        <label for="num">Number</label>
+    <input type="number" id="num">
+    
+    <input type="button" value="Find Square" onclick="findSquare()">
+<p id="reasult"></p>
+    </form>
+     
+    <script>
+        function findSquare(){
+            num = document.getElementById("num").value
+            square = parseFloat(num)* parseFloat(num)
+            document.getElementById("reasult").innerHTML = `Square is ${ square}`
+        }
+      
+    </script>
+</body>
+</html>

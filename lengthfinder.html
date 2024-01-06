@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Finder</title>
+</head>
+<body>
+    <h1>Length Finder</h1>
+    <p>Enter text to find the length</p>
+
+
+    <input  type="text" name="text" id="text" onkeyup="lengthFinder()">
+
+    <p id="result"></p>
+    <script>
+function lengthFinder(){
+text = document.getElementById("text").value;
+length = text.length
+document.getElementById("result").innerHTML = `Total length of ${text} is ${length}.`
+}
+    </script>
+</body>
+</html>

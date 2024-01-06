@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculation of simple interest</title>
+    <style>
+        #principle{
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        #time{
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        #rate{
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        body{
+            font-size: 20p;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <h1><u>Calculation of Simple Interest</u></h1>
+        <label for="principle">Principle</label> 
+        <input type="number" id="principle" placeholder="Enter amount"><br><br>
+        <label for="time">Time</label>
+        <input type="number" id="time" placeholder="Enter time"><br><br>
+        <label for="rate">Rate</label>
+        <input type="number" id="rate" placeholder="Enter rate">
+       <br>
+       <br>
+       <br>
+        <input onclick="calculateInterest()" type="button" value="Calculate">    
+    
+    </form>
+
+<script>
+function calculateInterest(){
+    p = document.getElementById("principle").value;
+    t = document.getElementById("time").value;
+    r = document.getElementById("rate").value;
+
+    si = parseFloat(p) * parseFloat(t) * parseFloat(r)/100
+ 
+    alert(`The simple interest is ${si}.`)
+    
+    
+}
+</script>
+</body>
+</html>

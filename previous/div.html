@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find div</title>
+    <style>
+        #num1{
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        #num2{
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        #button{
+            padding: 15px;
+            font-size: 15px;
+            border-radius: 10px
+        }
+      #form{
+        font-size: larger;
+      }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="num1" id= "form">Num1</label>
+        <input type="number" id="num1">
+        <label for="num2" id= "form">Num2</label>
+        <input type="number" id="num2"> <br><br>
+        <input type="button" id="button" value="Find Div" onclick="divNumbers()">
+    <p id="result"></p>
+    </form>
+    <script>
+        function divNumbers(){
+            num1= document.getElementById("num1").value
+            num2= document.getElementById("num2").value
+
+            div= parseFloat(num1) / parseFloat(num2)
+
+            document.getElementById("result").innerHTML = `div is ${div}`
+
+        }
+    </script>
+</body>
+</html>

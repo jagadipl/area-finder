@@ -1,0 +1,32 @@
+<!-- 
+
+    Create Currency Converter That Convert USD Amount to Nepali Amount.
+    Suppose 1 USD= 130 Nepali
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter</title>
+ </head>
+ <body>
+    <h1>Currency converter</h1>
+    <form action="#">
+        <input type="number" id="currency"> <br><br>
+       <input type="button" onclick="currencyConvert()" value="Convert">
+
+
+
+    </form>
+    <script>
+function currencyConvert(){
+    usd = document.getElementById("currency").value;
+    nepali = parseFloat(usd) * 130
+    alert(`nepali amount is ${nepali}`)
+}
+      
+    </script>
+    <!-- Convert Currency of USD to NPR, India, Japan -->
+ </body>
+ </html>

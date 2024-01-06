@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating a price calculator</title>
+    <style>
+        #price{
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 20px;
+        }
+        #button{
+            padding: 15px;
+            border-radius: 10px;
+        }
+        span{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <h1><span>Price</span> Calculator</h1>
+       <input type="number" id="price" placeholder="Enter amount"><br><br>
+       <input type="button" onclick="checkPrice()" id="button" value="Check">
+
+    </form>
+    <script>
+        function checkPrice(){
+            price = parseFloat(document.getElementById("price").value)
+            if(price>=500)
+            {alert("Price is high.")}
+                else{alert("Price is low.")}
+            
+
+        }
+    </script>
+</body>
+</html>
+

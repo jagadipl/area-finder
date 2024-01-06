@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Currency Converter</title>
+    <style>
+       #number{
+        padding: 15px;
+        border-radius: 10px;
+       }
+       #button{
+        padding: 15px;
+        border-radius: 10px;
+       }
+       #button:hover{
+        background-color: brown;
+       }
+    </style>
+</head>
+<body>
+    <h1>Multiple Currency Converter</h1>
+    <form action="#">
+        <input type="number" id="number" placeholder="Enter usd"><br><br>
+         
+        <p>Which Currency Do you like to Convert?</p>
+        <input type="radio" id="nepali" name="convert" value="nepali">
+        <label for="nepali">Nepali</label>
+        <input type="radio" id="indian" name="convert" value="indian">
+        <label for="indian">Indian</label>
+        <input type="radio" id="japanease" name="convert" value="japanease">
+        <label for="japanease">Japanease</label>
+      <input type="radio" id="bhutinease" name="convert" value="bhutinease">
+      <label for="bhutan">Bhutinease</label>
+      <input type="radio" id="pakistan" name="convert" value="pakistan">
+      <label for="pakistan">Pakistan</label><br>
+     <input type="radio" id="srilankan" name="convert" value="srilankan">
+    <label for="srilankan">Srilankan</label>
+    <input type="radio" id="chinease" name="convert" value="chinease">
+     <label for="chinease">Chinease</label><br><br>
+    <input type="button" value="Convert" id="button" onclick="CurrencyConvert()">
+    </form>
+    <script src="currency.js"></script>
+</body>
+</html>

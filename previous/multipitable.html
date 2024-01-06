@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multipication of Number</title>
+    <style>
+        body{
+            background-color:darkgray;
+        }
+        #num1{ 
+            padding: 15px;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            font-size: 15px;
+        }
+        #num2{
+            padding: 15px;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            font-size: 15px;
+        }
+       #button{
+        padding: 15px;
+        border-radius: 10px;
+
+       }
+       #button:hover{
+        background-color:bisque;
+       }
+       .card{
+        background-color: white;
+        float: left;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+       }
+    </style>
+</head>
+<body>
+    <h1><u>Multipication Table</u></h1>
+  <form action="">
+    <label for="num1">First Number</label>
+    <input type="number" id="num1"><br><br>
+    <label for="num2">Second Number</label>
+    <input type="number" id="num2"><br><br>
+    <input type="button" onclick="multipication()" value="Check" id="button">
+    
+  </form>
+  <br>
+ <div id="result"></div>
+<script>
+function multipication(){
+num1 = parseFloat(document.getElementById("num1").value)
+num2 = parseFloat(document.getElementById("num2").value)
+data = ''
+for(i=num1; i<=num2; i++){
+    data += ` <div class="card">`
+    for(j=1; j<=10; j++){
+        data+=`${i} * ${j} = ${i*j}<br>`
+    }
+    data+= `</div>`
+}
+document.getElementById("result").innerHTML=data;
+}
+</script>
+    
+</body>
+</html>
