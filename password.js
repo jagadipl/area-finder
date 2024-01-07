@@ -7,7 +7,7 @@ function randompasswordGenerator(total){
     
 console.log(`Random Password is: ${randompass}`);
 }
-randompasswordGenerator(6)
+randompasswordGenerator(7)
  
 function getRandomChar(){
     words = "ABCDEFGHIJ123456/*^%"
