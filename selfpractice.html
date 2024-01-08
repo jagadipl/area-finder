@@ -8,21 +8,39 @@
         #character{
             padding: 15px;
             border-radius: 10px;
-            
-
-        }
+            }
+            #button{
+                padding: 15px;
+                border-radius: 10px;
+            }
     </style>
 </head>
 <body>
-    <h1>Generating Random password</h1>
+    <h1>Random Password Generator</h1>
+    <p id="randompass">Random Password: 233233223233223</p>
     <form action="#">
-        <input type="character" id="character" >
+        <input type="character" id="character" placeholder="Enter length of Password" value="15" ><br><br>
+        <input type="button" onclick="RandomPassword()" id="button" value="Generate">
     </form>
      
     <script>
+        RandomPassword();
         function RandomPassword(){
-            
+            password = ""
+            total = parseFloat(document.getElementById("character").value)
+            for(i=0; i<total; i++){
+                password+=getRandomChar()
+            }
+            document.getElementById("randompass").innerHTML= `Random Password: ${password}`
+            console.log(`Random password is ${password}`)
         }
+    function getRandomChar(){
+    words = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890~@#$%^&*()-"
+    length = words.length
+    random_index = Math.floor(Math.random()*length)
+    return words[random_index] 
+    }
+
     </script>
 </body>
 </html>
