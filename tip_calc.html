@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amount Split</title>
+    <style>
+        #people,#amount,#button{
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Amount spliter</h1>
+    <p id="result"></p>
+    <form action="#">
+        <input type="number" id="people" placeholder="Enter number of people"><br><br>
+        <input type="number"  id="amount" placeholder="Enter total amount"><br><br>
+        <input type="button" id="button" onclick="AmountSpliter()" value="Calculate">
+    </form>
+
+    <script>
+        function AmountSpliter(){
+        totalAmount= parseFloat(document.getElementById("amount").value) 
+        toalPeople =parseFloat(document.getElementById("people").value)
+        splitAmount= totalAmount/toalPeople
+        document.getElementById("result").innerHTML = `Each person needs to pay $${splitAmount} `
+        }
+    </script>
+</body>
+</html>
