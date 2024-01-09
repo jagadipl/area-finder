@@ -5,8 +5,9 @@
 // Low Level: Uses 0 or 1 to code
 
 
+
 // Print your name in js.
 firstName = "Jagadip"
 lastName = "Lamsal"
 fullName = `${firstName} ${lastName}`
-console.log(fullName);
+console.log(`my name is ${fullName}`);
