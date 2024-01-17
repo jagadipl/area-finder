@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding word length</title>
+</head>
+<body>
+
+    <h1>Finding word length.</h1>
+    <p id="result"></p>
+    <input type="text" id="text">
+    <input type="button" id="button" onclick="findlength()" value="Find length">
+
+    <script>
+        function findlength(){
+            text = document.getElementById("text").value
+            textlength = text.length
+            wordlist = text.split(" ")
+            length = wordlist.length
+            console.log(`length of word is ${wordlist}`)
+
+            document.getElementById("result").innerHTML = `Character: ${textlength} Word: ${length}`
+
+        }
+    </script>
+</body>
+</html>

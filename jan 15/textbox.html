@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating textbox</title>
+    <style>
+        #rtext{
+            padding: 15px;
+            border-radius: 10px;
+        }
+        #ftext{
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <label for="find text">Find text</label>
+        <input type="text" id="ftext"><br><br>
+        <label for="replace text">Replace text</label>
+        <input type="text" id="rtext"><br><br>
+        <textarea name="box" id="box" cols="30" rows="10" placeholder="Enter Text"></textarea>
+        <input onclick="replaceNow()" type="button" value="Replace">
+    </form>
+
+    <script>
+        function replaceNow(){
+                textToReplace = document.getElementById("box").value;
+                findText = document.getElementById("ftext").value;
+                replaceText = document.getElementById("rtext").value;
+
+                newText = textToReplace.replaceAll(findText,replaceText)
+                document.getElementById("box").value= newText;
+                console.log(newText);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Finder</title>
+</head>
+<body>
+    <h1>Length Finder</h1>
+    <p id="demo"></p>
+    <form action="#">
+        <input type="text" id="text">
+        <input type="button" onclick="findlength()" value="Find length" id="button">
+    </form>
+
+    <script>
+        function findlength(){
+            text = document.getElementById("text").value
+        length = text.length
+        console.log(`length of text ${length}`)
+
+        document.getElementById("demo").innerHTML =`length of text is ${length}`
+
+        }
+       
+    </script>
+    
+</body>
+</html>

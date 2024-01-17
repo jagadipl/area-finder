@@ -28,3 +28,20 @@ for ( i= 1; i<=20; i++){
     }
     console.log(i)
 }
+// print number from 1 to 100
+for( i = 1; i<=100; i++){
+    console.log(i)
+}
+// print the multiple of 5 in js
+for( i=1; i<= 10; i++){
+    result = i * 5
+    console.log(`5 * ${i} = ${result}`)
+    
+}
+
+// Using a for loop to print multiplication table of 5
+for (let i = 1; i <= 10; i++) {
+    let result = i * 5;
+    console.log(`5 * ${i} = ${result}`);
+  }
+  

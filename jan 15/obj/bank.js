@@ -5,7 +5,7 @@ function BankAccount(holderName, initialBalance){
     this.deposit = function(amount){
         if(amount>0){
             this.balance += amount
-            console.log(`Deposited $${amount}. New Balance is ${this.balance}`);
+            console.log(`Deposited $${amount}. New Balance is $${this.balance}`);
         }else{
             console.log(`Invalid Amount`);
         }
@@ -17,9 +17,9 @@ function BankAccount(holderName, initialBalance){
             console.log(`Withdraw $${amount}. New Balance is ${this.balance}`);
 
         }else{
-            console.log('Insusufficient Balance');
+            console.log('Insufficient Balance');
         }
-    }
+    }  
 
     this.checkBalance = function(){
         console.log(`Dear ${this.holderName}, your current balance is $${this.balance}`);

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Calc</title>
+</head>
+<body>
+    <h1>Date Difference Calculator</h1>
+    <p id="result"></p>
+    <input type="date" name="datebox" id="datebox">
+    <input type="button" onclick="checkDate()" value="Calculate">
+
+    <script>
+        function checkDate(){
+            birthYear = parseFloat(document.getElementById("datebox")).value
+             age = 2024 - birthYear
+             
+             document.getElementById("result").innerHTML = `Your age is${age}`
+        }
+     
+    </script>
+
+
+</body>
+</html>

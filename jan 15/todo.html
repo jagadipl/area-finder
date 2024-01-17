@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todo App</h1>
+    <input type="text" name="todo" id="todo">
+    <input type="button" onclick="addTodo()" value="Add Todo">
+
+    <div id="result">
+
+    </div>
+    <script>
+        todo = []
+
+        function addTodo(){
+            todoText = document.getElementById("todo").value
+            todo.push(todoText)
+            text = "<ol>"
+            for(i=0; i<todo.length; i++){
+                    text+= `<li> ${todo[i]}</li>`
+            }
+            text += "</ol>"
+
+            document.getElementById("result").innerHTML= text
+            document.getElementById("todo").value = ""
+        }
+    </script>
+</body>
+</html>

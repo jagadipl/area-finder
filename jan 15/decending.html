@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decending Order </title>
+
+    <style>
+    #text{
+        padding: 15px;
+        border-radius: 10px;
+    }
+    #button{
+        padding:15px;
+        border-radius: 10px;
+        margin-left: 20px;
+    }
+        </style>
+</head>
+<body>
+    <h1>Enter the Name of Student</h1>
+    <p>Satudent name in alphabetical decending order</p>
+
+    <label for="Enter name">Enter Name</label>
+    <input type="text" id="text" placeholder="Enter name of student">
+    <input type="button" onclick="decendingOrder()" id="button" value="Reverse">
+   <p id="result"></p>
+
+    <script>
+        function decendingOrder(){
+            text = document.getElementById("text").value
+            text = text.split(",")
+            console.log(text);
+            text = text.sort()
+            text = text.reverse()
+            console.log(text);
+            result = ""
+            for( i=0; i<text.length; i++){
+                result += `${text[i]} <br>`
+            }
+           document.getElementById("result").innerHTML = result
+        }
+
+
+
+        
+    </script>
+    
+</body>
+</html>

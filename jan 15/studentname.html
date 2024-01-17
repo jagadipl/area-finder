@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store names</title>
+    <style>
+        #text{
+            padding: 15px;
+            border-radius: 10px;
+        }
+        #button{
+            padding:15px;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1><u>Enter the Names of student</u></h1>
+    <p>Student name in alphabetical ascending order</p>
+    <label for="enter name">Enter Name</label>
+    <input type="text" id="text" placeholder="Enter name of student"><br>
+    <input type="button" onclick="nameinOrder()" id="button" value="Sort">
+    <p id="result"></p>
+    <script>
+      function nameinOrder(){
+        text = document.getElementById("text").value
+        text = text.split(",")
+        text.sort()
+        result = ""
+        for(i=0; i<text.length; i++){
+            result+= `${text[i]} <br> ` 
+        }
+        document.getElementById("result").innerHTML = result
+        }
+      
+    </script>
+    
+</body>
+</html>
