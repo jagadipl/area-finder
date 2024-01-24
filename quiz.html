@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <style>
+        h1{
+            background-color: green;
+            color: white;
+            border-radius: 9px;
+            padding: 10px;
+        }
+        input{
+            display: block;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="question"></h1>
+    <input type="button" value="8870m" id="opt1">
+    <input type="button" value="7850m" id="opt2">
+    <input type="button" value="8860m" id="opt3">
+    <input type="button" value="8848m" id="opt4"><br>
+    <input type="button" value="Check" id="button">
+   
+    <script>
+        class Quiz{
+    constructor(question,option1,option2,option3,option4,answer){
+        this.question = question
+        this.option1  = option1
+        this.option2  = option2
+        this.option3  = option3
+        this.option4  = option4
+        this.answer   = answer
+    }
+
+    
+    }
+
+    const question1 = new Quiz("What is the height of Mt Everest?","8770m","7850m","8860m","8848m","8848m")
+    const question2 = new Quiz("When was the first world war?","1925","1914","1910","1930","1914")
+    const question3 = new Quiz("How much total worth does Ellon Musk has?","168b","217b","185b","170b","217b")
+    const question4 = new Quiz("Who is the CEO of Google?","Ram Chandra","Kishor","Sundar","Dipendra","Sundar")
+
+    document.getElementById("question").innerHTML= question1.question
+        </script>
+</body>
+</html>

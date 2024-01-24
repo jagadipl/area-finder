@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary</title>
+    <style>
+       input{
+            padding: 10px;
+            border-radius: 10px;
+            margin-left: 15px;
+        }
+        body{
+            font-size: 20px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>Practicing the Map</h1>
+    
+    <label for="default">Put Value in all box</label>
+    <input type="text" id="default" value="0" onkeyup="fillToAllBox()"><br><br>
+    <label for="jan">Jan</label>
+    <input type="text" id="jan" value="0"><br><br>
+    <label for="feb">Feb</label>
+    <input type="text" id="feb" value="0"><br><br>
+    <label for="mar">Mar</label>
+    <input type="text" id="mar" value="0"><br><br>
+    <label for="apr">Apr</label>
+    <input type="text" id="apr" value="0"><br><br>
+    <label for="may">May</label>
+    <input type="text" id="may" value="0"><br><br>
+    <label for="jun">Jun</label>
+    <input type="text" id="jun" value="0"><br><br>
+    <label for="jul">Jul</label>
+    <input type="text" id="jul" value="0"><br><br>
+    <label for="aug">Aug</label>
+    <input type="text" id="aug" value="0"><br><br>
+    <label for="sep">Sep</label>
+    <input type="text" id="sep" value="0"><br><br>
+    <label for="oct">Oct</label>
+    <input type="text" id="oct" value="0"><br><br>
+    <label for="nov">Nov</label>
+    <input type="text" id="nov" value="0"><br><br>
+    <label for="dec">Dec</label>
+    <input type="text" id="dec" value="0">
+    <input type="button" onclick="salaryCalculation()" id="button" value="Calculate">
+
+
+    <p id="result"></p>
+
+
+<script>
+    
+    salary = new Map()
+function salaryCalculation(){
+
+    jan = parseFloat(document.getElementById("jan").value)
+    feb = parseFloat(document.getElementById("feb").value)
+    mar = parseFloat(document.getElementById("mar").value)
+    apr = parseFloat(document.getElementById("apr").value)
+    may = parseFloat(document.getElementById("may").value)
+    jun = parseFloat(document.getElementById("jun").value)
+    jul = parseFloat(document.getElementById("jul").value)
+    aug = parseFloat(document.getElementById("aug").value)
+    sep = parseFloat(document.getElementById("sep").value)
+    oct = parseFloat(document.getElementById("oct").value)
+    nov = parseFloat(document.getElementById("nov").value)
+    dec = parseFloat(document.getElementById("dec").value)
+
+
+    totalSalary = jan+feb+mar+apr+may+jun+jul+aug+sep+oct+nov+dec
+    averageSalary = totalSalary/12
+    document.getElementById("result").innerHTML = `Total salary of the year = ${totalSalary} and averageSalary of the year ${averageSalary}`
+
+   
+
+}
+function fillToAllBox(){
+    boxValue = document.getElementById("default").value
+
+    document.getElementById("jan").value =boxValue
+    document.getElementById("feb").value =boxValue
+    document.getElementById("mar").value =boxValue
+    document.getElementById("apr").value =boxValue
+    document.getElementById("may").value =boxValue
+    document.getElementById("jun").value =boxValue
+    document.getElementById("jul").value =boxValue
+    document.getElementById("aug").value =boxValue
+    document.getElementById("sep").value =boxValue
+    document.getElementById("oct").value =boxValue
+    document.getElementById("nov").value =boxValue
+    document.getElementById("dec").value =boxValue
+
+}
+
+
+</script>
+    
+</body>
+</html>

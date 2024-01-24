@@ -13,10 +13,12 @@
 
     <script>
         function checkDate(){
-            birthYear = parseFloat(document.getElementById("datebox")).value
-             age = 2024 - birthYear
+            birthDate = document.getElementById("datebox").value
+            birthYear = birthDate.toString().substring(0,4)
+            console.log(birthYear); 
+           age = 2024 - birthYear
              
-             document.getElementById("result").innerHTML = `Your age is${age}`
+            document.getElementById("result").innerHTML = `Your age is ${age}`
         }
      
     </script>
