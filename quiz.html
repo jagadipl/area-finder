@@ -11,21 +11,34 @@
             border-radius: 9px;
             padding: 10px;
         }
-        input{
+        /* input{
             display: block;
             padding: 10px;
             margin: 10px;
             border-radius: 10px;
+        } */
+        .option{
+            display: block;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 1px solid gray;
+        }
+        .selected{
+            border-color: blue;
         }
     </style>
 </head>
 <body>
     <h1 id="question"></h1>
-    <input type="button" value="8870m" id="opt1">
-    <input type="button" value="7850m" id="opt2">
-    <input type="button" value="8860m" id="opt3">
-    <input type="button" value="8848m" id="opt4"><br>
-    <input type="button" value="Check" id="button">
+    <div id="options">
+        <input class="option" type="button" value="" id="opt1">
+    <input class="option" type="button" value="" id="opt2">
+    <input class="option" type="button" value="" id="opt3">
+    <input class="option" type="button" value="" id="opt4"><br>
+    </div>
+    <input type="button" value="Next" id="nextButton">
    
     <script>
         class Quiz{
@@ -41,12 +54,59 @@
     
     }
 
-    const question1 = new Quiz("What is the height of Mt Everest?","8770m","7850m","8860m","8848m","8848m")
+    const question1 = new Quiz("What is the height of Mt Everest?","9770m","7850m","8860m","8848m","8848m")
     const question2 = new Quiz("When was the first world war?","1925","1914","1910","1930","1914")
     const question3 = new Quiz("How much total worth does Ellon Musk has?","168b","217b","185b","170b","217b")
     const question4 = new Quiz("Who is the CEO of Google?","Ram Chandra","Kishor","Sundar","Dipendra","Sundar")
 
-    document.getElementById("question").innerHTML= question1.question
+    const questions = [question1,question2,question3,question4]
+    let currentQuestioIndex = 0;
+    let score=0;
+    let selectedAnswer ='';
+
+
+    function displayQuestion(){
+    let q = questions[currentQuestioIndex];
+    document.getElementById("question").innerText= q.question
+    document.getElementById("opt1").value= q.option1
+    document.getElementById("opt2").value= q.option2
+    document.getElementById("opt3").value= q.option3
+    document.getElementById("opt4").value= q.option4
+        resetSelection();
+    }
+
+    function resetSelection(){
+        selectedAnswer= ''
+        document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+    }
+
+    function selectOption(option){
+        resetSelection();
+        selectedAnswer= option.innerText
+        option.classList.add('selected')
+    }
+
+    function nextQuestion(){
+        if(selectedAnswer == questions[currentQuestioIndex].answer){
+            score++;
+        }
+        if(currentQuestioIndex<questions.length-1){
+            currentQuestioIndex++;
+            displayQuestion();
+        }else{
+            alert(`Quiz Finished. Your score is ${score} out of ${questions.length}`)
+        }
+    }
+
+    document.getElementById('options').addEventListener('click', function(e){
+        if(e.target.classList.contains('option')){
+            selectOption(e.target)
+        }
+    })
+
+    document.getElementById("nextButton").addEventListener('click',nextQuestion);
+    displayQuestion();
+    
         </script>
 </body>
 </html>
